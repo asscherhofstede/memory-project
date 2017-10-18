@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Memory {
-	public partial class Form1 : Form {
-		public Form1() {
+namespace Memory.Views {
+	public partial class Eindscherm : Form {
+		public Eindscherm() {
 			InitializeComponent();
 		}
 	}
