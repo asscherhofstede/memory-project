@@ -47,5 +47,10 @@ namespace Memory.Views {
         {
 
         }
+
+        private void Hoofdscherm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

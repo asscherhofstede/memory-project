@@ -104,7 +104,7 @@
             // 
             // Help
             // 
-            this.Help.Location = new System.Drawing.Point(472, 435);
+            this.Help.Location = new System.Drawing.Point(473, 396);
             this.Help.Name = "Help";
             this.Help.Size = new System.Drawing.Size(69, 29);
             this.Help.TabIndex = 7;
@@ -116,7 +116,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(553, 476);
+            this.ClientSize = new System.Drawing.Size(583, 516);
             this.Controls.Add(this.Help);
             this.Controls.Add(this.Quit);
             this.Controls.Add(this.ChooseTheme);
@@ -125,9 +125,10 @@
             this.Controls.Add(this.LoadGame);
             this.Controls.Add(this.Singleplayer);
             this.Controls.Add(this.MainMenu);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Hoofdscherm";
             this.Text = "Hoofdscherm";
+            this.Load += new System.EventHandler(this.Hoofdscherm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
