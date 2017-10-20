@@ -25,8 +25,8 @@ namespace Memory {
 			views.Add("spelscherm", new Spelscherm());
 			views.Add("eindscherm", new Eindscherm());
             views.Add("laadscherm", new Laadscherm());
-            views.Add("localmultiplayer", new LocalMultiplayer());
-            views.Add("onlinemultiplayer", new OnlineMultiplayer());
+            views.Add("LocalMultiplayer", new LocalMultiplayer());
+            views.Add("OnlineMultiplayer", new OnlineMultiplayer());
             views.Add("choosetheme", new ChooseTheme());
             views.Add("gethelp", new GetHelp());
 
