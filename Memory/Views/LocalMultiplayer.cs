@@ -21,5 +21,10 @@ namespace Memory.Views
         {
 
         }
+
+        private void BackToMainMenu_Click(object sender, EventArgs e)
+        {
+            MainForm.LoadView("hoofdscherm");
+        }
     }
 }

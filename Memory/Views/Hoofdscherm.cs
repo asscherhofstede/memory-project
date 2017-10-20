@@ -15,46 +15,41 @@ namespace Memory.Views {
             InitializeComponent();
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void LocalMultiplayer_Click(object sender, EventArgs e)
         {
-            MainForm.LoadView("Spelscherm");
+            MainForm.LoadView("LocalMultiplayer");
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void SinglePlayer_Click(object sender, EventArgs e)
         {
-
+            MainForm.LoadView("spelscherm");
         }
 
-        private void button1_Click_2(object sender, EventArgs e)
+        private void Load_Click(object sender, EventArgs e)
         {
             MainForm.LoadView("Laadscherm");
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void OnlineMultiplayer_Click(object sender, EventArgs e)
         {
-
+            MainForm.LoadView("OnlineMultiplayer");
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void Theme_Click(object sender, EventArgs e)
         {
-
+            MainForm.LoadView("ChooseTheme");
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void GetHelp_Click(object sender, EventArgs e)
         {
-
+            MainForm.LoadView("GetHelp");
         }
 
-        private void Hoofdscherm_Load(object sender, EventArgs e)
+        private void Quit_Click(object sender, EventArgs e)
         {
-
+            DialogResult quit = MessageBox.Show("Are you sure you want to quit?", "Memory Game", MessageBoxButtons.YesNo);
+            if (quit == DialogResult.Yes)
+                Application.ExitThread();
         }
-
-        private void LocalMultiplayer_Click(object sender, EventArgs e)
-        {
-            MainForm.LoadView("LocalMultiplayer");
-
-        }
-    
     }
 }

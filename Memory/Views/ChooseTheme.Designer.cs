@@ -29,12 +29,21 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChooseTheme));
+            this.BackToMainMenu = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // BackToMainMenu
+            // 
+            resources.ApplyResources(this.BackToMainMenu, "BackToMainMenu");
+            this.BackToMainMenu.Name = "BackToMainMenu";
+            this.BackToMainMenu.UseVisualStyleBackColor = true;
+            this.BackToMainMenu.Click += new System.EventHandler(this.BackToMainMenu_Click);
             // 
             // ChooseTheme
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.BackToMainMenu);
             this.Name = "ChooseTheme";
             this.UseWaitCursor = true;
             this.ResumeLayout(false);
@@ -42,5 +51,7 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Button BackToMainMenu;
     }
 }
