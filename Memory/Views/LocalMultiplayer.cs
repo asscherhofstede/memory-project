@@ -8,18 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Memory.Views {
-	public partial class Spelscherm : Form {
-		public Spelscherm() {
-			InitializeComponent();
-		}
-
-        private void label1_Click(object sender, EventArgs e)
+namespace Memory.Views
+{
+    public partial class LocalMultiplayer : Form
+    {
+        public LocalMultiplayer()
         {
-
+            InitializeComponent();
         }
 
-        private void Spelscherm_Load(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

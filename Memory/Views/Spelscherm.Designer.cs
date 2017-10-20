@@ -23,28 +23,32 @@
 		/// the contents of this method with the code editor.
 		/// </summary>
 		private void InitializeComponent() {
-			this.label1 = new System.Windows.Forms.Label();
-			this.SuspendLayout();
-			// 
-			// label1
-			// 
-			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(0, 0);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(82, 17);
-			this.label1.TabIndex = 0;
-			this.label1.Text = "Spelscherm";
-			// 
-			// Spelscherm
-			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(282, 253);
-			this.Controls.Add(this.label1);
-			this.Name = "Spelscherm";
-			this.Text = "Spelscherm";
-			this.ResumeLayout(false);
-			this.PerformLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(222, 69);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(62, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Spelscherm";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // Spelscherm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(535, 480);
+            this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "Spelscherm";
+            this.Text = "Spelscherm";
+            this.Load += new System.EventHandler(this.Spelscherm_Load);
+            this.ResumeLayout(false);
+            this.PerformLayout();
 
 		}
 

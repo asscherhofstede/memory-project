@@ -72,6 +72,7 @@
             this.LocalMultiplayer.TabIndex = 3;
             this.LocalMultiplayer.Text = "Local Multiplayer";
             this.LocalMultiplayer.UseVisualStyleBackColor = true;
+            this.LocalMultiplayer.Click += new System.EventHandler(this.LocalMultiplayer_Click);
             // 
             // OnlineMultiplayer
             // 
