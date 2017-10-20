@@ -24,11 +24,11 @@ namespace Memory {
 			views.Add("hoofdscherm", new Hoofdscherm());
 			views.Add("spelscherm", new Spelscherm());
 			views.Add("eindscherm", new Eindscherm());
-            views.Add("laadscherm", new Laadscherm());
-            views.Add("localmultiplayer", new LocalMultiplayer());
-            views.Add("onlinemultiplayer", new OnlineMultiplayer());
-            views.Add("choosetheme", new ChooseTheme());
-            views.Add("gethelp", new GetHelp());
+            views.Add("Laadscherm", new Laadscherm());
+            views.Add("LocalMultiplayer", new LocalMultiplayer());
+            views.Add("OnlineMultiplayer", new OnlineMultiplayer());
+            views.Add("ChooseTheme", new ChooseTheme());
+            views.Add("GetHelp", new GetHelp());
 
 			foreach (KeyValuePair<string, Form> rawView in views) {
 				Form view = rawView.Value;
@@ -55,6 +55,15 @@ namespace Memory {
         private void viewPanel_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult quit = MessageBox.Show("Are you sure you want to quit?", "Memory Game", MessageBoxButtons.YesNo);
+            if (quit == DialogResult.Yes)
+                Application.ExitThread();
+            else if (quit == DialogResult.No)
+                e.Cancel = true;
         }
     }
 }

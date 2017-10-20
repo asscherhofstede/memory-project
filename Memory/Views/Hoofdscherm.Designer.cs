@@ -42,7 +42,6 @@
             this.MainMenu.Size = new System.Drawing.Size(60, 13);
             this.MainMenu.TabIndex = 0;
             this.MainMenu.Text = "Main Menu";
-            this.MainMenu.Click += new System.EventHandler(this.label1_Click);
             // 
             // Singleplayer
             // 
@@ -52,7 +51,7 @@
             this.Singleplayer.TabIndex = 1;
             this.Singleplayer.Text = "Singleplayer";
             this.Singleplayer.UseVisualStyleBackColor = true;
-            this.Singleplayer.Click += new System.EventHandler(this.button1_Click_1);
+            this.Singleplayer.Click += new System.EventHandler(this.SinglePlayer_Click);
             // 
             // LoadGame
             // 
@@ -62,7 +61,7 @@
             this.LoadGame.TabIndex = 2;
             this.LoadGame.Text = "Load game";
             this.LoadGame.UseVisualStyleBackColor = true;
-            this.LoadGame.Click += new System.EventHandler(this.button1_Click_2);
+            this.LoadGame.Click += new System.EventHandler(this.Load_Click);
             // 
             // LocalMultiplayer
             // 
@@ -82,7 +81,7 @@
             this.OnlineMultiplayer.TabIndex = 4;
             this.OnlineMultiplayer.Text = "Online Multiplayer";
             this.OnlineMultiplayer.UseVisualStyleBackColor = true;
-            this.OnlineMultiplayer.Click += new System.EventHandler(this.button3_Click);
+            this.OnlineMultiplayer.Click += new System.EventHandler(this.OnlineMultiplayer_Click);
             // 
             // ChooseTheme
             // 
@@ -92,7 +91,7 @@
             this.ChooseTheme.TabIndex = 5;
             this.ChooseTheme.Text = "Choose Theme";
             this.ChooseTheme.UseVisualStyleBackColor = true;
-            this.ChooseTheme.Click += new System.EventHandler(this.button4_Click);
+            this.ChooseTheme.Click += new System.EventHandler(this.Theme_Click);
             // 
             // Quit
             // 
@@ -102,16 +101,17 @@
             this.Quit.TabIndex = 6;
             this.Quit.Text = "Quit";
             this.Quit.UseVisualStyleBackColor = true;
+            this.Quit.Click += new System.EventHandler(this.Quit_Click);
             // 
             // Help
             // 
-            this.Help.Location = new System.Drawing.Point(473, 396);
+            this.Help.Location = new System.Drawing.Point(505, 408);
             this.Help.Name = "Help";
             this.Help.Size = new System.Drawing.Size(69, 29);
             this.Help.TabIndex = 7;
             this.Help.Text = "Get Help";
             this.Help.UseVisualStyleBackColor = true;
-            this.Help.Click += new System.EventHandler(this.button6_Click);
+            this.Help.Click += new System.EventHandler(this.GetHelp_Click);
             // 
             // Hoofdscherm
             // 
@@ -129,7 +129,6 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Hoofdscherm";
             this.Text = "Hoofdscherm";
-            this.Load += new System.EventHandler(this.Hoofdscherm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

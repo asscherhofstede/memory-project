@@ -18,19 +18,9 @@ namespace Memory.Views
             
         }
 
-        private void LoadScreen_Click(object sender, EventArgs e)
+        private void BackToMainMenu_Click(object sender, EventArgs e)
         {
-            
-        }
-
-        private void Laadscherm_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
+            MainForm.LoadView("hoofdscherm");
         }
     }
 }

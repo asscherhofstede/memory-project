@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.LocalMultiplayerTitle = new System.Windows.Forms.Label();
+            this.BackToMainMenu = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LocalMultiplayerTitle
@@ -41,11 +42,23 @@
             this.LocalMultiplayerTitle.Text = "Local Multiplayer";
             this.LocalMultiplayerTitle.Click += new System.EventHandler(this.label1_Click);
             // 
+            // BackToMainMenu
+            // 
+            this.BackToMainMenu.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.BackToMainMenu.Location = new System.Drawing.Point(12, 408);
+            this.BackToMainMenu.Name = "BackToMainMenu";
+            this.BackToMainMenu.Size = new System.Drawing.Size(69, 29);
+            this.BackToMainMenu.TabIndex = 9;
+            this.BackToMainMenu.Text = "Back";
+            this.BackToMainMenu.UseVisualStyleBackColor = true;
+            this.BackToMainMenu.Click += new System.EventHandler(this.BackToMainMenu_Click);
+            // 
             // LocalMultiplayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(586, 449);
+            this.Controls.Add(this.BackToMainMenu);
             this.Controls.Add(this.LocalMultiplayerTitle);
             this.Name = "LocalMultiplayer";
             this.Text = "LocalMultiplayer";
@@ -57,5 +70,6 @@
         #endregion
 
         private System.Windows.Forms.Label LocalMultiplayerTitle;
+        private System.Windows.Forms.Button BackToMainMenu;
     }
 }

@@ -28,13 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.BackToMainMenu = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // BackToMainMenu
+            // 
+            this.BackToMainMenu.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.BackToMainMenu.Location = new System.Drawing.Point(12, 408);
+            this.BackToMainMenu.Name = "BackToMainMenu";
+            this.BackToMainMenu.Size = new System.Drawing.Size(69, 29);
+            this.BackToMainMenu.TabIndex = 9;
+            this.BackToMainMenu.Text = "Back";
+            this.BackToMainMenu.UseVisualStyleBackColor = true;
+            this.BackToMainMenu.Click += new System.EventHandler(this.BackToMainMenu_Click);
             // 
             // OnlineMultiplayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(586, 449);
+            this.Controls.Add(this.BackToMainMenu);
             this.Name = "OnlineMultiplayer";
             this.Text = "Online Multiplayer";
             this.ResumeLayout(false);
@@ -42,5 +55,7 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Button BackToMainMenu;
     }
 }
