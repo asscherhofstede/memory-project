@@ -9,10 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Memory.Views {
-	public partial class Hoofdscherm : Form {
-		public Hoofdscherm() {
-			InitializeComponent();
-		}
+
+    public partial class Hoofdscherm : Form {
+        public Hoofdscherm() {
+            InitializeComponent();
+        }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
@@ -52,6 +53,8 @@ namespace Memory.Views {
         private void LocalMultiplayer_Click(object sender, EventArgs e)
         {
             MainForm.LoadView("LocalMultiplayer");
+
         }
+    
     }
 }

@@ -61,11 +61,29 @@
     <Compile Include="Persistence\SaveHandler.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\ChooseTheme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ChooseTheme.Designer.cs">
+      <DependentUpon>ChooseTheme.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Eindscherm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\Eindscherm.Designer.cs">
       <DependentUpon>Eindscherm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GetHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\GetHelp.Designer.cs">
+      <DependentUpon>GetHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OnlineMultiplayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\OnlineMultiplayer.Designer.cs">
+      <DependentUpon>OnlineMultiplayer.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Laadscherm.cs">
       <SubType>Form</SubType>
@@ -103,8 +121,20 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\ChooseTheme.aa-DJ.resx">
+      <DependentUpon>ChooseTheme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ChooseTheme.resx">
+      <DependentUpon>ChooseTheme.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Eindscherm.resx">
       <DependentUpon>Eindscherm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\GetHelp.resx">
+      <DependentUpon>GetHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OnlineMultiplayer.resx">
+      <DependentUpon>OnlineMultiplayer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Hoofdscherm.resx">
       <DependentUpon>Hoofdscherm.cs</DependentUpon>

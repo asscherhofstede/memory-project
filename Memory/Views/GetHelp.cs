@@ -8,15 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Memory.Views {
-	public partial class Eindscherm : Form {
-		public Eindscherm() {
-			InitializeComponent();
-		}
-
-        private void Eindscherm_Load(object sender, EventArgs e)
+namespace Memory.Views
+{
+    public partial class GetHelp : Form
+    {
+        public GetHelp()
         {
-
+            InitializeComponent();
         }
     }
 }

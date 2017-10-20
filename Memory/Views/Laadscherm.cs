@@ -15,6 +15,7 @@ namespace Memory.Views
         public Laadscherm()
         {
             InitializeComponent();
+            
         }
 
         private void LoadScreen_Click(object sender, EventArgs e)

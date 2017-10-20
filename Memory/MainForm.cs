@@ -24,6 +24,12 @@ namespace Memory {
 			views.Add("hoofdscherm", new Hoofdscherm());
 			views.Add("spelscherm", new Spelscherm());
 			views.Add("eindscherm", new Eindscherm());
+            views.Add("laadscherm", new Laadscherm());
+            views.Add("localmultiplayer", new LocalMultiplayer());
+            views.Add("onlinemultiplayer", new OnlineMultiplayer());
+            views.Add("choosetheme", new ChooseTheme());
+            views.Add("gethelp", new GetHelp());
+
 			foreach (KeyValuePair<string, Form> rawView in views) {
 				Form view = rawView.Value;
 				view.TopLevel = false;
@@ -45,5 +51,10 @@ namespace Memory {
 				loadedView.Show();
 			}
 		}
-	}
+
+        private void viewPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+    }
 }

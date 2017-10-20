@@ -1,6 +1,6 @@
 ﻿namespace Memory.Views
 {
-    partial class LocalMultiplayer
+    partial class GetHelp
     {
         /// <summary>
         /// Required designer variable.
@@ -28,34 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.LocalMultiplayerTitle = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // LocalMultiplayerTitle
-            // 
-            this.LocalMultiplayerTitle.AutoSize = true;
-            this.LocalMultiplayerTitle.Location = new System.Drawing.Point(288, 38);
-            this.LocalMultiplayerTitle.Name = "LocalMultiplayerTitle";
-            this.LocalMultiplayerTitle.Size = new System.Drawing.Size(86, 13);
-            this.LocalMultiplayerTitle.TabIndex = 0;
-            this.LocalMultiplayerTitle.Text = "Local Multiplayer";
-            this.LocalMultiplayerTitle.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // LocalMultiplayer
+            // GetHelp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(586, 449);
-            this.Controls.Add(this.LocalMultiplayerTitle);
-            this.Name = "LocalMultiplayer";
-            this.Text = "LocalMultiplayer";
+            this.Name = "GetHelp";
+            this.Text = "Get Help";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label LocalMultiplayerTitle;
     }
 }

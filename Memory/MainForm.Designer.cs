@@ -23,26 +23,29 @@
 		/// the contents of this method with the code editor.
 		/// </summary>
 		private void InitializeComponent() {
-			this.viewPanel = new System.Windows.Forms.Panel();
-			this.SuspendLayout();
-			// 
-			// viewPanel
-			// 
-			this.viewPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.viewPanel.Location = new System.Drawing.Point(0, 0);
-			this.viewPanel.Name = "viewPanel";
-			this.viewPanel.Size = new System.Drawing.Size(782, 553);
-			this.viewPanel.TabIndex = 0;
-			// 
-			// Hoofdscherm
-			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(782, 553);
-			this.Controls.Add(this.viewPanel);
-			this.Name = "Hoofdscherm";
-			this.Text = "Memory";
-			this.ResumeLayout(false);
+            this.viewPanel = new System.Windows.Forms.Panel();
+            this.SuspendLayout();
+            // 
+            // viewPanel
+            // 
+            this.viewPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.viewPanel.Location = new System.Drawing.Point(0, 0);
+            this.viewPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.viewPanel.Name = "viewPanel";
+            this.viewPanel.Size = new System.Drawing.Size(586, 449);
+            this.viewPanel.TabIndex = 0;
+            this.viewPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.viewPanel_Paint);
+            // 
+            // MainForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(586, 449);
+            this.Controls.Add(this.viewPanel);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "MainForm";
+            this.Text = "Memory";
+            this.ResumeLayout(false);
 
 		}
 
