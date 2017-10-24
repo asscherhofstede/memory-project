@@ -32,7 +32,7 @@
             this.viewPanel.Location = new System.Drawing.Point(0, 0);
             this.viewPanel.Margin = new System.Windows.Forms.Padding(2);
             this.viewPanel.Name = "viewPanel";
-            this.viewPanel.Size = new System.Drawing.Size(586, 449);
+            this.viewPanel.Size = new System.Drawing.Size(784, 561);
             this.viewPanel.TabIndex = 0;
             this.viewPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.viewPanel_Paint);
             // 
@@ -40,8 +40,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(586, 449);
+            this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.viewPanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainForm";
             this.Text = "Memory";
