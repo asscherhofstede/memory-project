@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 
 namespace Memory.Views
 {
@@ -38,12 +39,7 @@ namespace Memory.Views
         public void Spelscherm_Load(object sender, EventArgs e)
         {
             NewGame();
-            //foreach (Button btn in panel1.Controls)
-            //{
-            //    btn.Image = Properties.Resources.Cover;
-            //}
             RandomButtonTags();
-            SetImage4x4();
 
         }
 
@@ -59,49 +55,91 @@ namespace Memory.Views
                 count++;
             }
 
-            //Een array even groot als de hoeveelheid buttons.
-            int[] array = new int[count];
+            List<int> RandomNumberGenerator = new List<int>(count);
 
-            //toekennen voor elk element van de array een random nummer tussen 1 en de hoeveelheid buttons op de panel.
+            //Vul de lijst met nummers gelijk aan het aantal buttons.
             for (int i = 0; i < count; i++)
             {
-                array[i] = rng.Next(1, count + 1);
+                RandomNumberGenerator.Add(i + 1);
+                //RandomNumberGenerator[i] = rng.Next(1, count);
+                //RandomNumberGenerator.RemoveAt(Convert.ToInt32(rng));
             }
+
+            int[] NumberOfButtons = Enumerable.Range(1, count).ToArray();
+            int[] array = new int[count];
+
+            for (int i = 0; i < count; i++)
+            {
+                int index1 = rng.Next(i, count);
+                array[i] = NumberOfButtons[index];
+                NumberOfButtons[index] = NumberOfButtons[i];
+                // This step not necessary, but allows you to reuse allPossibleNumbers
+                // rather than generating a fresh one every time.
+                // allPossibleNumbers[i] = lotteryNumber[i];
+            }
+            //foreach (Button btn in panel1.Controls)
+            //{
+            //    btn.Tag = rng.Next(1, count);
+
+            //}
+
+
+
+            //Een array even groot als de hoeveelheid buttons.
+            int[] array1 = new int[count];
+
+
+            ////toekennen voor elk element van de array een random nummer tussen 1 en de hoeveelheid buttons op de panel.
+            //for (int i = 0; i < count; i++)
+            //{
+            //    array[i] = RandomNumberGenerator.Next(1, count + 1);
+
+            //}
 
             //Voor elke button het toekennen van het random nummer.
             foreach (Button btn in panel1.Controls)
             {
-                btn.Tag = array[index];
+                btn.Tag = NumberOfButtons[index];
                 index++;
             }
+            Console.WriteLine(count);
             return count;
-            SetImage4x4(btn);
         }
 
-        public void SetImage4x4(params btn, int count)
+        public void SetImage4x4(Button btn)
         {
-            for (int i = 0; i < count; i++)
+            switch (btn.Tag)
             {
-                if (Convert.ToInt32(btn.Tag) == i || Convert.ToInt32(btn.Tag) == i + count / 2)
-                {
-                    btn.Image = images[i];
-                }
+                case 1: case 7:
+                    btn.Image = Properties.Resources.Card1;
+                    break;
+                case 2: case 8:
+                    btn.Image = Properties.Resources.Card2;
+                    break;
+                case 3: case 9:
+                    btn.Image = Properties.Resources.Card3;
+                    break;
+                case 4: case 10:
+                    btn.Image = Properties.Resources.Card4;
+                    break;
+                case 5: case 11:
+                    btn.Image = Properties.Resources.Card5;
+                    break;
+                case 6: case 12:
+                    btn.Image = Properties.Resources.Card6;
+                    break;
+                default:
+                    btn.Image = Properties.Resources.Cover;
+                    break;
+
+
             }
-
         }
-        public void SetImage6x6()
-        {
 
-        }
-        public void SetImage8x8()
-        {
-
-        }
         public void ButtonClick(object sender, EventArgs e)
         {
             Button btn = sender as Button;
-            SetRandomImages((Button)sender);
-            //btn.Image = null;
+            SetImage4x4((Button)btn);
             btn.Enabled = false;
         }
 
