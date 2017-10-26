@@ -1,12 +1,14 @@
-﻿using System;
+﻿using Memory.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Memory
 {
-	class Game
+	public class Game
     {
         public static void StartGame()
         {
@@ -23,9 +25,9 @@ namespace Memory
 
         }
 
-        public void SetRandomImages()
+        public void SetRandomImages(Button btn)
         {
-            Random setRandomImage = new Random();
+            
         }
 
         public void NewGame()
