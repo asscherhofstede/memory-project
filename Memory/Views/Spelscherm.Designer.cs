@@ -23,14 +23,19 @@
 		/// the contents of this method with the code editor.
 		/// </summary>
 		private void InitializeComponent() {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.DelayTimer = new System.Windows.Forms.Timer(this.components);
+            this.lul = new System.Windows.Forms.Label();
+            this.TimerCunt = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(642, 241);
+            this.label1.Location = new System.Drawing.Point(643, 241);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 13);
@@ -44,11 +49,43 @@
             this.panel1.Size = new System.Drawing.Size(538, 561);
             this.panel1.TabIndex = 1;
             // 
+            // DelayTimer
+            // 
+            this.DelayTimer.Interval = 1500;
+            this.DelayTimer.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // lul
+            // 
+            this.lul.AutoSize = true;
+            this.lul.Location = new System.Drawing.Point(593, 331);
+            this.lul.Name = "lul";
+            this.lul.Size = new System.Drawing.Size(33, 13);
+            this.lul.TabIndex = 2;
+            this.lul.Text = "Timer";
+            // 
+            // TimerCunt
+            // 
+            this.TimerCunt.AutoSize = true;
+            this.TimerCunt.Location = new System.Drawing.Point(673, 331);
+            this.TimerCunt.Name = "TimerCunt";
+            this.TimerCunt.Size = new System.Drawing.Size(0, 13);
+            this.TimerCunt.TabIndex = 3;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(632, 328);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 4;
+            // 
             // Spelscherm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TimerCunt);
+            this.Controls.Add(this.lul);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -64,5 +101,9 @@
 
 		private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Timer DelayTimer;
+        private System.Windows.Forms.Label lul;
+        private System.Windows.Forms.Label TimerCunt;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

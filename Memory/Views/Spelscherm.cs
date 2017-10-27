@@ -4,12 +4,19 @@ using System.IO;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Collections;
+using System.Threading;
 
 namespace Memory.Views
 {
     public partial class Spelscherm : Form
     {
         List<Image> images;
+        //hier komen de static variables
+        static bool firstClick = false;
+        static bool secondClick = false;
+        static int count = 0;
+        static int midden = count / 2;
 
         public Spelscherm()
         {
@@ -39,8 +46,6 @@ namespace Memory.Views
         public void Spelscherm_Load(object sender, EventArgs e)
         {
             NewGame();
-            RandomButtonTags();
-
         }
 
         public int RandomButtonTags()
@@ -61,53 +66,22 @@ namespace Memory.Views
             for (int i = 0; i < count; i++)
             {
                 RandomNumberGenerator.Add(i + 1);
-                //RandomNumberGenerator[i] = rng.Next(1, count);
-                //RandomNumberGenerator.RemoveAt(Convert.ToInt32(rng));
             }
 
-            int[] NumberOfButtons = Enumerable.Range(1, count).ToArray();
-            int[] array = new int[count];
-
-            for (int i = 0; i < count; i++)
-            {
-                int index1 = rng.Next(i, count);
-                array[i] = NumberOfButtons[index];
-                NumberOfButtons[index] = NumberOfButtons[i];
-                // This step not necessary, but allows you to reuse allPossibleNumbers
-                // rather than generating a fresh one every time.
-                // allPossibleNumbers[i] = lotteryNumber[i];
-            }
-            //foreach (Button btn in panel1.Controls)
-            //{
-            //    btn.Tag = rng.Next(1, count);
-
-            //}
-
-
-
-            //Een array even groot als de hoeveelheid buttons.
-            int[] array1 = new int[count];
-
-
-            ////toekennen voor elk element van de array een random nummer tussen 1 en de hoeveelheid buttons op de panel.
-            //for (int i = 0; i < count; i++)
-            //{
-            //    array[i] = RandomNumberGenerator.Next(1, count + 1);
-
-            //}
+            ShuffleList(RandomNumberGenerator);
 
             //Voor elke button het toekennen van het random nummer.
             foreach (Button btn in panel1.Controls)
             {
-                btn.Tag = NumberOfButtons[index];
+                btn.Tag = RandomNumberGenerator[index];
                 index++;
             }
             Console.WriteLine(count);
             return count;
         }
 
-        public void SetImage4x4(Button btn)
-        {
+        public void SetImage(Button btn)
+        { 
             switch (btn.Tag)
             {
                 case 1: case 7:
@@ -131,16 +105,79 @@ namespace Memory.Views
                 default:
                     btn.Image = Properties.Resources.Cover;
                     break;
-
-
             }
+            //int count = 0;
+            //foreach (Button x in panel1.Controls)
+            //{
+            //    count++;
+            //}
+            //int midden = (count / 2) - 1;
+            //int i = 0;
+            //foreach (Button x in panel1.Controls)
+            //{
+            //    if (i <= midden)
+            //    {
+            //        btn.Image = images[i];
+            //        i++;
+            //    }
+            //    else if (i >= midden)
+            //    {
+            //        btn.Image = images[i - (midden + 1)];
+            //        i++;
+            //    }
+            //}
+
+            ////for (int i = 0; i < count; i++)
+            ////{
+            ////    if (i < midden)
+            ////    {
+            ////        btn.Image = images[i];
+            ////    }
+            ////    else if(i > midden)
+            ////    {
+            ////        btn.Image = images[i - (midden+1)];
+            ////    }
+            ////}
         }
 
         public void ButtonClick(object sender, EventArgs e)
         {
             Button btn = sender as Button;
-            SetImage4x4((Button)btn);
-            btn.Enabled = false;
+            if (firstClick == true)
+            {
+                btn.Image = null;
+                SetImage(btn);
+                CompareImages(btn);
+                //secondClick = true;
+            }
+            else if (firstClick == false)
+            {
+                btn.Image = null;
+                SetImage(btn);
+                firstClick = true;
+                //Timer();
+            }
+            else if (secondClick == true)
+            {
+            }
+            //btn.Image = null;
+            //SetImage(btn);
+            //btn.Enabled = false;
+
+        }
+
+        public void CompareImages(Button btn)
+        {
+            NumberOfButtons(count);
+            int midden = count / 2;
+            if((Convert.ToInt32(btn.Tag) == Convert.ToInt32(btn.Tag)+midden) || (Convert.ToInt32(btn.Tag) + midden == Convert.ToInt32(btn.Tag)))
+            {
+
+            }
+            else
+            {
+                btn.Image = Properties.Resources.Cover;
+            }
         }
 
         public void StartGame()
@@ -153,7 +190,7 @@ namespace Memory.Views
 
         }
 
-        public void ResetImages()
+        public void Cover()
         {
             foreach (Button btn in panel1.Controls)
             {
@@ -188,6 +225,45 @@ namespace Memory.Views
         public void NewGame()
         {
 
+            RandomButtonTags();
+            Cover();
+        }
+
+        public void Timer()
+        {
+            DelayTimer.Enabled = true;
+            textBox1.Text = DelayTimer.ToString();
+        }
+
+        public static void ShuffleList<E>(IList<E> list)
+        {
+            Random random = new Random();
+            if (list.Count > 1)
+            {
+                for (int i = list.Count - 1; i >= 0; i--)
+                {
+                    E tmp = list[i];
+                    int randomIndex = random.Next(i + 1);
+
+                    //Swap elements
+                    list[i] = list[randomIndex];
+                    list[randomIndex] = tmp;
+                }
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            //DelayTimer.Start();
+
+        }
+
+        public void NumberOfButtons(int count)
+        {
+            foreach(Button btn in panel1.Controls)
+            {
+                count++;
+            }
         }
     }
 }
