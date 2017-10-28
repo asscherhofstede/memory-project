@@ -12,6 +12,7 @@ namespace Memory.Views
     public partial class Spelscherm : Form
     {
         List<Image> images;
+        List<int> ButtonTags;
         //hier komen de static variables
         static bool firstClick = false;
         static bool secondClick = false;
@@ -48,7 +49,7 @@ namespace Memory.Views
             NewGame();
         }
 
-        public int RandomButtonTags()
+        public void RandomButtonTags()
         {
             Random rng = new Random();
             int count = 0;
@@ -60,6 +61,9 @@ namespace Memory.Views
                 count++;
             }
 
+            int middle = count / 2;
+
+            ButtonTags = new List<int>(count);
             List<int> RandomNumberGenerator = new List<int>(count);
 
             //Vul de lijst met nummers gelijk aan het aantal buttons.
@@ -74,10 +78,10 @@ namespace Memory.Views
             foreach (Button btn in panel1.Controls)
             {
                 btn.Tag = RandomNumberGenerator[index];
+                ButtonTags.Add(Convert.ToInt32(btn.Tag));
                 index++;
             }
             Console.WriteLine(count);
-            return count;
         }
 
         public void SetImage(Button btn)
@@ -106,48 +110,29 @@ namespace Memory.Views
                     btn.Image = Properties.Resources.Cover;
                     break;
             }
-            //int count = 0;
-            //foreach (Button x in panel1.Controls)
-            //{
-            //    count++;
-            //}
-            //int midden = (count / 2) - 1;
-            //int i = 0;
-            //foreach (Button x in panel1.Controls)
-            //{
-            //    if (i <= midden)
-            //    {
-            //        btn.Image = images[i];
-            //        i++;
-            //    }
-            //    else if (i >= midden)
-            //    {
-            //        btn.Image = images[i - (midden + 1)];
-            //        i++;
-            //    }
-            //}
-
-            ////for (int i = 0; i < count; i++)
-            ////{
-            ////    if (i < midden)
-            ////    {
-            ////        btn.Image = images[i];
-            ////    }
-            ////    else if(i > midden)
-            ////    {
-            ////        btn.Image = images[i - (midden+1)];
-            ////    }
-            ////}
         }
 
         public void ButtonClick(object sender, EventArgs e)
         {
             Button btn = sender as Button;
-            if (firstClick == true)
+
+            //if (clickedButton != null)
+            //{
+            //    // If the clicked label is black, the player clicked
+            //    // an icon that's already been revealed --
+            //    // ignore the click
+            //    if (clickedButton.ForeColor == Color.Black)
+            //    {
+            //        return;
+            //    }
+
+            //    clickedButton.ForeColor = Color.Black;
+            //}
+            if (firstClick == false)
             {
                 btn.Image = null;
                 SetImage(btn);
-                CompareImages(btn);
+                //CompareImages();
                 //secondClick = true;
             }
             else if (firstClick == false)
@@ -157,7 +142,7 @@ namespace Memory.Views
                 firstClick = true;
                 //Timer();
             }
-            else if (secondClick == true)
+            else if (secondClick == false)
             {
             }
             //btn.Image = null;
@@ -166,18 +151,26 @@ namespace Memory.Views
 
         }
 
-        public void CompareImages(Button btn)
+        public void CompareImages()
         {
-            NumberOfButtons(count);
-            int midden = count / 2;
-            if((Convert.ToInt32(btn.Tag) == Convert.ToInt32(btn.Tag)+midden) || (Convert.ToInt32(btn.Tag) + midden == Convert.ToInt32(btn.Tag)))
-            {
+            //if(btn.tag == 1)
+            //{
+            //    KeepPairsVisible();
+            //}
+            //else
+            //{
+            //    TurnCards();
+            //}
+        }
 
-            }
-            else
-            {
-                btn.Image = Properties.Resources.Cover;
-            }
+        public void TurnCards()
+        {
+            
+        }
+
+        public void KeepPairsVisible()
+        {
+            
         }
 
         public void StartGame()
