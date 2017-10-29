@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Memory", "Memory\Memory.csproj", "{FE79838D-3771-487B-ADB0-1CF3FBF39B59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoryServer", "MemoryServer\MemoryServer.csproj", "{583602E1-74E6-4070-B0B7-4F7904017353}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE79838D-3771-487B-ADB0-1CF3FBF39B59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE79838D-3771-487B-ADB0-1CF3FBF39B59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE79838D-3771-487B-ADB0-1CF3FBF39B59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE79838D-3771-487B-ADB0-1CF3FBF39B59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{583602E1-74E6-4070-B0B7-4F7904017353}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{583602E1-74E6-4070-B0B7-4F7904017353}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{583602E1-74E6-4070-B0B7-4F7904017353}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{583602E1-74E6-4070-B0B7-4F7904017353}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0A074E52-F42F-4BDB-97E2-E0F9F3C609DD}
+	EndGlobalSection
+EndGlobal
