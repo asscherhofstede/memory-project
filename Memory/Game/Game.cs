@@ -10,29 +10,6 @@ namespace Memory
 {
 	public class Game
     {
-        public static void StartGame()
-        {
-
-        }
-
-        public void Reset()
-        {
-
-        }
-
-        public void ResetImages()
-        {
-
-        }
-
-        public void SetRandomImages(Button btn)
-        {
-            
-        }
-
-        public void NewGame()
-        {
-
-        }
+        
 	}
 }

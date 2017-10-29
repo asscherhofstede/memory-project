@@ -44,6 +44,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Spelscherm";
             // 
+            // BackToMainMenu
+            // 
+            this.BackToMainMenu.Location = new System.Drawing.Point(703, 520);
+            this.BackToMainMenu.Name = "BackToMainMenu";
+            this.BackToMainMenu.Size = new System.Drawing.Size(69, 29);
+            this.BackToMainMenu.TabIndex = 1;
+            this.BackToMainMenu.Text = "Back";
+            this.BackToMainMenu.UseVisualStyleBackColor = true;
+            this.BackToMainMenu.Click += new System.EventHandler(this.BackToMainMenu_CLick);
+            // 
             // panel1
             // 
             this.panel1.Location = new System.Drawing.Point(12, 0);
@@ -80,23 +90,13 @@
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 4;
             // 
-            // BackToMainMenu
-            // 
-            this.BackToMainMenu.Location = new System.Drawing.Point(12, 520);
-            this.BackToMainMenu.Name = "BackToMainMenu";
-            this.BackToMainMenu.Size = new System.Drawing.Size(69, 29);
-            this.BackToMainMenu.TabIndex = 1;
-            this.BackToMainMenu.Text = "Back";
-            this.BackToMainMenu.UseVisualStyleBackColor = true;
-            this.BackToMainMenu.Click += new System.EventHandler(this.BackToMainMenu_CLick);
-            // 
             // Spelscherm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Memory.Properties.Resources.BackGround;
-            this.Controls.Add(this.BackToMainMenu);
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.BackToMainMenu);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.TimerCunt);
             this.Controls.Add(this.lul);

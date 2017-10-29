@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Game\Cards.cs" />
     <Compile Include="Game\Game.cs" />
     <Compile Include="Networking\Networking.cs" />
     <Compile Include="MainForm.cs">

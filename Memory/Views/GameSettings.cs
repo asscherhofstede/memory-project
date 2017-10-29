@@ -30,16 +30,16 @@ namespace Memory.Views
 
         public void GridSize4x4_Click(object sender, EventArgs e)
         {
-            yAmount = 4;
-            xAmount = 4;
+            int yAmount = 4;
+            int xAmount = 4;
         }
 
-        private void GridSize6x4_Click(object sender, EventArgs e)
+        public void GridSize6x4_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void GridSize8x8_Click(object sender, EventArgs e)
+        public void GridSize8x8_Click(object sender, EventArgs e)
         {
 
         }
